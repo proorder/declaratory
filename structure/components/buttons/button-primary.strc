@@ -1,0 +1,12 @@
+button-primary {
+  .button {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px 7px;
+  }
+  <content>
+    <button>
+      <inner />
+    </button>
+  </content>
+}

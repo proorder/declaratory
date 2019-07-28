@@ -1,0 +1,50 @@
+button-primary {
+  .button {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px 7px;
+  }
+  <content>
+    <button>
+      <inner />
+    </button>
+  </content>
+}
+
+some_el {
+  &:hover = slide_menu.active_el;
+  body&on:scroll: (scroll) {
+    if (scroll.y > 30) {
+      position: fixed;
+    }
+  }
+  &on:click {
+    $page_content {
+      display: block;
+    }
+    $page_content = $back->getprocess({});
+  }
+  <content>
+    Hi
+  </content>
+}
+
+module {
+  <content>
+    // Permissions создан для групп юзеров из блока авторизации
+    // Указывая параметр preload - мы указываем, что нужно подгрузить существующую информацию
+    <iform
+      table="client"
+      query="id = $get.id"
+      preload="overlap | change | button | percent"
+      permission="visitior | user | admin | superuser"
+    >
+      // name - поле в таблице
+      <input
+        name="full_name"
+      />
+      // Кнопку нужно определить с помощью параметра save с атрибутами прелоадера
+      <button save="overlap | change | button | percent">Сохранить</button>
+    </iform>
+  </content>
+}

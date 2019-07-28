@@ -1,0 +1,27 @@
+import buttons/button-primary
+
+base {
+  .router {
+    preloader-type: inner;
+  }
+  .button-primary {
+    background: url('Hi');
+    &on:click {
+      $router->page = shop;
+    }
+  }
+  <content>
+    <left>
+      Hello<button-primary>
+        Загрузить
+        <button-primary hello>
+          Загрузить<i>Link</i>
+        </button-primary>
+      </button-primary>
+    </left>
+    <div>Hello!</div>
+    <right>
+      <router />
+    </right>
+  </content>
+}

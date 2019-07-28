@@ -1,0 +1,7 @@
+home {
+  &on:load {
+  }
+  <content>
+    Hello, home!
+  </content>
+}
